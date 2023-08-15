@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Cajero</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <img class="header__img1" src="img/pngwing.com (1).png" alt="">
+        <img class="header__img2" src="img/pngwing.com.png" alt="">
+    </header>
+    <main id="start-show" class="main">
+    
+        <form id="form" class="form">
+            <label for="username">Usuario:</label>
+            <input class="form__imput" type="email" placeholder="Correo" id="username" name="username">
+
+            <span class="form__span--hide" id="usernameError">Error:usuario incorrecto o no registrado</span>
+            
+            <label for="password">Contraseña</label>
+            <input class="form__imput" type="password" placeholder=" Contraseña" id="password" name="password">
+            
+            <span class="form__span--hide" id="passwordError">Error:Contraseña incorrecta</span>
+            
+            <button type="submit" class="form__button">Ingresar</button>
+        </form>
+    </main>
+    
+    <main id="menu-show" class="main-atm--hide">
+        <h1 id="welcome" class="menu-atm__h1"></h1>
+        <section class="main-atm__balance">
+            <button class="main-atm__button" id="btnConsultBalance">Consultar saldo</button>
+            <p id="availableBalance">Saldo disponible: $<span id="currentBalance">0</span></p>
+        </section>
+        <section class="main-atm__deposit">
+            <input type="number" id="depositAmount" placeholder="Ingresar saldo">
+            <button class="main-atm__button" id="btnDeposit">Depositar</button>
+            <p id="depositedAmountInfo" class="info"></p>
+        </section>
+        <section id="withdrawSection" class="main-atm__withdraw--hide">
+            <input type="number" id="withdrawAmount" placeholder="retirar saldo">
+            <button class="main-atm__button" id="btnWithdraw">Retirar</button>
+            <p id="withdrawnAmountInfo" class="info"></p>
+        </section>
+            <span id="minError" class="minerror--hide" >Error: no puedes tener menos de 10$</span>
+            <span id="maxError" class="maxerror--hide">Error: no puedes tener mas de 990$</span>
+    </main>
+
+    <footer id="footer" class="footer">
+        <p >Por favor introduzca su tarjeta y NO la retire hasta que terminar la validación de usuario y contraseña. </p>
+    </footer>
+    
+        <script src="main.js"></script>
+</body>
+</html>
